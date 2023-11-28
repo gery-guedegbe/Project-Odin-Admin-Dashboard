@@ -1,0 +1,355 @@
+ @import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Roboto:wght@300;400;500&display=swap');
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    width: 1600px;
+    height: 900px;
+}
+
+.container{
+    width: 100%;
+    max-height: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 20vh 1fr 1fr;
+}
+
+aside{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 100%;
+    height: 100vw;
+    padding: 20px;
+    background-color: #1F1F1F;
+    position: relative;
+}
+
+.dash-title{
+    font-size: 40px;
+}
+
+.custom-icon{
+    color: #ffffff;
+}
+
+.dash-title span{
+    margin: 10px;
+    font-size: 30px;
+    font-weight: 540;
+}
+
+.sidebar-icon{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.sidebar-icon span{
+     margin: 10px;
+}
+
+.icons-first-bloc{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 50px;
+}
+
+.icons-last-bloc{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 50px;
+}
+
+header{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-start: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    background: #ffffff;
+    height: 20vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+}
+
+.header-icon{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.first-header-content{
+    display: flex;
+    gap: 300px;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.first-header-content .research-bar{
+    background: #E2E8F0;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    padding: 10px;
+    width: 500px;
+    height: 5px;
+}
+
+.first-header-content img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.first-header-1{
+    display: flex;
+    gap: 10px; 
+}
+
+.first-header-2{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.first-header-2 p{
+    color: #000000;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.second-header-content{
+    display: flex;
+    gap: 500px;
+    align-items: center;
+    margin: 0  auto;
+}
+
+.second-header-1{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.second-header-1 div{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.second-header-1 div h2{
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+.second-header-1 img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.second-header-2{
+    display: flex;
+    gap: 20px;
+}
+
+.header-btn{
+    flex: 1;
+    width: 33.33%;
+    padding: 8px 20px;
+    border: 1px solid transparent;
+    background: #1F1F1F;
+    color: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/*-----------------Main content------------*/
+
+main{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    width: 1350px;
+    height: 100%;
+}
+
+.main-content{
+    background: #E2E8F0;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: min-content 1fr;
+    gap: 2rem;
+    grid-template-areas:'projects announcements''projects trending';
+    overflow: auto;
+}
+
+.main-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.card {
+    background-color: #fafaf9;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.card-text {
+    color: #78716c;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.projects .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.projects .card {
+    border-left: 10px solid #01AC2C;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.25em;
+}
+  
+.projects .card-text {
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.actions {
+    margin-top: auto;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.actions i {
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+.actions a{
+    text-decoration: none;
+    color: #292524;
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.announcement {
+    width: 25ch;
+    padding: 1rem 0;
+}
+
+.announcement:first-child {
+    padding-top: 0;
+}
+  
+.announcement:last-child {
+    padding-bottom: 0;
+}
+
+.announcement h5 {
+    font-size: 0.9rem;
+    margin-bottom: 0.25em;
+}
+
+.announcement p {
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.announcement + .announcement {
+    border-top: #e7e5e4 1px solid;
+}
+  
+.trending {
+    grid-area: trending;
+}
+
+.trending h3{
+    margin-top: 10px;
+}
+  
+.trending .card {
+    padding: 1.5rem;
+}
+
+.trend {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+  
+.trend + .trend {
+    margin-top: 1.5rem;
+}
+
+.trend .picture {
+    background-color: #01AC2C;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+  
+.trend .account {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+  
+.trend .username {
+    font-weight: 500;
+    margin-bottom: 0.15rem;
+}
+
+.trend-1 .picture {
+    background-image: var(--avatar2);
+}
+  
+.trend-3 .picture {
+    background-image: var(--avatar3);
+}
+  
+.trend-4 .picture {
+    background-image: var(--avatar4);
+}
+  
